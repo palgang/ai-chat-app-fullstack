@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  backend:
+    build: ./backend_python
+    ports:
+      - "8000:8000"
+    environment:
+      - ENVIRONMENT=development
+    volumes:
+      - ./backend_python:/app
+    restart: unless-stopped
+
+  frontend:
+    build: ./frontend_react
+    ports:
+      - "3000:3000"
+    environment:
+      - NEXT_PUBLIC_API_URL=http://localhost:8000
+    volumes:
+      - ./frontend_react:/app
+      - /app/node_modules
+    depends_on:
+      - backend
+    restart: unless-stopped
