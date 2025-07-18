@@ -1,5 +1,7 @@
 # AI Chat App - Full Stack
 
+![Build Status](https://github.com/palgang/ai-chat-app-fullstack/actions/workflows/main.yml/badge.svg)
+
 A full-stack AI chat application built with FastAPI (Python) backend and Next.js (React) frontend.
 
 ## 🚀 Features
