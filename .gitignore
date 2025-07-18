@@ -57,8 +57,7 @@ backend_python/.venv/
 backend_python/venv/
 
 # FastAPI specific
-*.db
-*.sqlite3
+# (Remove database files since app doesn't use database)
 
 # Environment variables
 .env
@@ -153,11 +152,6 @@ temp/
 config/local.json
 config/local.yml
 config/local.yaml
-
-# Database files
-*.db
-*.sqlite
-*.sqlite3
 
 # API Keys and secrets
 secrets.json
