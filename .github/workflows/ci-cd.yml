@@ -179,13 +179,15 @@ jobs:
     - name: Build backend Docker image
       uses: docker/build-push-action@v5
       with:
-        context: ./backend_python
+        context: .
+        file: ./backend_python/Dockerfile
         push: false
         tags: ai-chat-backend:latest
     
     - name: Build frontend Docker image
       uses: docker/build-push-action@v5
       with:
-        context: ./frontend_react
+        context: .
+        file: ./frontend_react/Dockerfile
         push: false
         tags: ai-chat-frontend:latest
